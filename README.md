@@ -2,7 +2,25 @@ docker-compose for Twitter + Kafka 0.8.2.1  + Logstash 2.3 + ElasticSearch 2.3
 =============================
 
 ### Update configuration of twitter-2-kafka.config 
-1. To update the key , secret , token 
+1. To update the key , secret , token by your Twitter 
+
+		input {
+			twitter {
+				# update data
+				consumer_key => "YOUR_CONSUMER_KEY"
+				consumer_secret => "YOUR_CONSUMER_SECTET"
+				oauth_token => "YOUR_OAUTH_TOKEN"
+				oauth_token_secret => "YOUR_OAUTH_TOKEN_SECRET"
+
+				keywords => ["NBA"]
+				full_tweet => true
+			}
+		}		
+
+
+
+
+
 2. To update the "keywords"
 
 
